@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import connectDB from "./utils/db.js";
 import dotenv from "dotenv";
+import userRoute from "./routes/user.routes.js";
 
 
 dotenv.config();
@@ -29,6 +30,9 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 8000;
+
+app.use("/api/v1/user", userRoute)
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
