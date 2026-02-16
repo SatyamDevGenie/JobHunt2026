@@ -1,4 +1,5 @@
 import { Job } from "../models/job.model.js";
+import { Application } from "../models/application.model.js";
 
 // admin post krega job
 export const postJob = async (req, res) => {
